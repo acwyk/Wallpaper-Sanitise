@@ -12,8 +12,11 @@ def img_size(file_path):
         return img.size
 
 
-def keep_or_delete(file_size, path, filename):
-    if file_size < 19201080:
+def keep_or_delete(min_file_size, file_size, path):
+    
+    non_tuple_min_file_size = int(''.join(map(str,min_file_size))) #non tuple of the MINIMUM file size
+    non_tuple_file_size = int(''.join(map(str,file_size))) # non tuple of the file size
+    if non_tuple_file_size < non_tuple_min_file_size:
         print (path, " - DELETED")
         os.remove(path)
     else:
@@ -23,6 +26,7 @@ def keep_or_delete(file_size, path, filename):
 if __name__ == "__main__":
     try:
         mypath=sys.argv[1]
+        min_size = (int(sys.argv[2]), int(sys.argv[3]))
         onlyfiles = listdir(mypath)
         onlyfiles.remove(".DS_Store")
         for name in onlyfiles:
@@ -32,13 +36,12 @@ if __name__ == "__main__":
             pathname += "/"
             pathname += filename
             img_file_size = img_size(pathname)
-            non_tuple_file_size = int(''.join(map(str,img_file_size)))
-            keep_or_delete(non_tuple_file_size, pathname, filename)
+            keep_or_delete(min_size, img_file_size, pathname)
 
     
     except:
-        print('Please pass directory_name')
-        print('Example: wallpaper.py <directory to wallpapers>')
+        print('Please pass directory_name, and minimun resolution')
+        print('Example: wallpaper.py <directory to wallpapers> <width> <height>')
 
 
 
