@@ -1,8 +1,9 @@
 # Wallpaper-Sanitiser-
-Sanitise your wallpaper folders to keep only 1920x1080 and above.
+Sanitise your wallpaper folders to keep resolutions above the specified resolution.
 
 Usage:
-  wallpaper.py < wallpaper directory >
+  <p>wallpaper.py < wallpaper directory > < minimum width > < minimum height></p>
+  <p>wallpaper.py ~/Pictures/Wallpapers 1920 1080</p>
   
 The script scans through that directory and removes any image files that are under 1920x1080 in resolution.
 The script outputs what files are removed, and what files are kept. 
