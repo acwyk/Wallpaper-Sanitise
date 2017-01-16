@@ -50,4 +50,3 @@ if __name__ == "__main__":
 	except:
 		print('Please pass directory_name, and minimum resolution')
 		print('Example: wallpaper.py <directory to wallpapers> <width> <height>')
-		
