@@ -1,4 +1,4 @@
-# Wallpaper-Sanitiser-
+# Wallpaper-Sanitiser
 Sanitise your wallpaper folders to keep resolutions above the specified resolution.
 
 Usage:
