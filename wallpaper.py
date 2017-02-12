@@ -66,10 +66,8 @@ if __name__ == "__main__":
 			
 			#Determins if path is an image.
 			if img_file_size != 0:
-				print(pathname, " - RETURNED 1 | FILE SIZE - ", img_file_size, "\n")
 				keep_or_delete(min_size, img_file_size, pathname)
 			else:
-				print(pathname, " - RETURNED 0")
 				continue
 		print(count, " files scanned")
 		print("Please view sanitize.log for a list of deleted files")
