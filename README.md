@@ -3,7 +3,7 @@ Sanitise your wallpaper folders to keep resolutions above the specified resoluti
 
 Usage:
   <p>wallpaper.py < wallpaper directory > < minimum width > < minimum height></p>
-  <p>wallpaper.py ~/Pictures/Wallpapers 1920 1080</p>
+  <p><code>python wallpaper.py ~/Pictures/Wallpapers 1920 1080</code></p>
   
   Required tehse Python Libraries to run:
   <ul>
